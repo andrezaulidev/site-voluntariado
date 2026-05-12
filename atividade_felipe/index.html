@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marmita Solidária · Escola Paulo de Tarso</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=Nunito+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════ NAVBAR ═══════════ -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <svg width="44" height="44" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="22" cy="22" r="21" fill="#F97316"/>
+          <path d="M22 6 L36 14 L36 30 L22 38 L8 30 L8 14 Z" fill="none" stroke="#fff" stroke-width="1.5"/>
+          <text x="22" y="26" text-anchor="middle" font-family="serif" font-weight="900" font-size="11" fill="#fff" letter-spacing="1">EPT</text>
+        </svg>
+        <span>Escola Paulo de Tarso</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#voluntariado">Voluntariado</a></li>
+        <li><a href="#causa">A Causa</a></li>
+        <li><a href="#projeto">O Projeto</a></li>
+        <li><a href="#formulario">Inscreva-se</a></li>
+      </ul>
+      <a href="#formulario" class="nav-cta">Seja Voluntário</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ═══════════ HERO ═══════════ -->
+  <section id="hero">
+    <div class="hero-blobs">
+      <div class="blob b1"></div>
+      <div class="blob b2"></div>
+      <div class="blob b3"></div>
+    </div>
+
+    <div class="hero-content">
+      <span class="badge">🍽️ 2026 · Ano Internacional dos Voluntários</span>
+      <h1>
+        Uma marmita pode<br>
+        <em>mudar um dia.</em><br>
+        Muitos voluntários<br>
+        mudam vidas.
+      </h1>
+      <p class="hero-sub">
+        Junte-se ao projeto <strong>Marmita Solidária</strong> e ajude a combater
+        a insegurança alimentar na comunidade da Escola Paulo de Tarso.
+      </p>
+      <div class="hero-btns">
+        <a href="#formulario" class="btn btn-white">Quero ser voluntário</a>
+        <a href="#projeto" class="btn btn-outline-white">Conhecer o projeto</a>
+      </div>
+      <div class="hero-counter">
+        <span class="counter-num" id="heroCounter">0</span>
+        <span class="counter-lbl">voluntários inscritos</span>
+      </div>
+    </div>
+
+    <!-- Ilustração SVG estilo IA -->
+    <div class="hero-art" aria-label="Ilustração gerada por IA: comunidade compartilhando refeições">
+      <svg viewBox="0 0 420 400" xmlns="http://www.w3.org/2000/svg" role="img">
+        <title>Comunidade solidária compartilhando alimentos</title>
+        <!-- BG circle -->
+        <circle cx="210" cy="200" r="185" fill="rgba(255,255,255,0.08)"/>
+        <!-- Table -->
+        <ellipse cx="210" cy="270" rx="150" ry="30" fill="#EA580C" opacity="0.7"/>
+        <rect x="60" y="265" width="300" height="18" rx="9" fill="#C2410C" opacity="0.8"/>
+        <!-- Plates -->
+        <ellipse cx="140" cy="260" rx="35" ry="12" fill="#fff" opacity="0.9"/>
+        <ellipse cx="210" cy="258" rx="35" ry="12" fill="#fff" opacity="0.9"/>
+        <ellipse cx="280" cy="260" rx="35" ry="12" fill="#fff" opacity="0.9"/>
+        <circle cx="140" cy="258" r="22" fill="#FED7AA"/>
+        <circle cx="210" cy="256" r="22" fill="#FED7AA"/>
+        <circle cx="280" cy="258" r="22" fill="#FED7AA"/>
+        <!-- Food details -->
+        <circle cx="140" cy="257" r="10" fill="#F97316" opacity="0.8"/>
+        <circle cx="210" cy="255" r="10" fill="#F97316" opacity="0.8"/>
+        <circle cx="280" cy="257" r="10" fill="#F97316" opacity="0.8"/>
+        <!-- Person left -->
+        <circle cx="100" cy="195" r="28" fill="#FED7AA"/>
+        <path d="M72 240 Q100 220 128 240 L128 265 Q100 258 72 265 Z" fill="#1e3a8a"/>
+        <path d="M80 195 Q72 175 88 168 Q100 162 112 168 Q128 175 120 195" fill="#92400e"/>
+        <!-- Person center -->
+        <circle cx="210" cy="185" r="30" fill="#FBBF24"/>
+        <path d="M180 232 Q210 210 240 232 L242 260 Q210 252 178 260 Z" fill="#F97316"/>
+        <path d="M186 185 Q178 162 196 155 Q210 148 224 155 Q242 162 234 185" fill="#92400e"/>
+        <!-- Person right -->
+        <circle cx="318" cy="195" r="28" fill="#D8B4FE"/>
+        <path d="M290 240 Q318 220 346 240 L346 265 Q318 258 290 265 Z" fill="#1e3a8a"/>
+        <path d="M298 195 Q290 175 306 168 Q318 162 330 168 Q346 175 338 195" fill="#1e1b4b"/>
+        <!-- Arms reaching toward center -->
+        <path d="M128 225 Q155 240 178 240" stroke="#FED7AA" stroke-width="10" fill="none" stroke-linecap="round"/>
+        <path d="M242 240 Q265 240 290 225" stroke="#D8B4FE" stroke-width="10" fill="none" stroke-linecap="round"/>
+        <!-- Hearts floating -->
+        <text x="175" y="145" font-size="18" fill="#fff" opacity="0.9">❤️</text>
+        <text x="225" y="130" font-size="14" fill="#fff" opacity="0.7">❤️</text>
+        <text x="145" y="155" font-size="12" fill="#fff" opacity="0.6">❤️</text>
+        <!-- Stars -->
+        <circle cx="60" cy="100" r="3" fill="#fff" opacity="0.5"/>
+        <circle cx="360" cy="80" r="4" fill="#fff" opacity="0.4"/>
+        <circle cx="380" cy="150" r="2" fill="#fff" opacity="0.6"/>
+        <circle cx="40" cy="180" r="3" fill="#fff" opacity="0.5"/>
+        <!-- Label -->
+        <text x="210" y="360" text-anchor="middle" font-family="sans-serif" font-size="10" fill="rgba(255,255,255,0.5)" letter-spacing="1">✦ ILUSTRAÇÃO GERADA POR IA ✦</text>
+      </svg>
+    </div>
+
+    <div class="wave-bottom">
+      <svg viewBox="0 0 1440 90" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M0,45 C240,90 480,0 720,45 C960,90 1200,0 1440,45 L1440,90 L0,90 Z" fill="#fff9f5"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ═══════════ ANO DO VOLUNTARIADO ═══════════ -->
+  <section id="voluntariado" class="section-light">
+    <div class="container">
+      <div class="two-col reveal">
+        <div class="col-text">
+          <span class="section-tag">2026</span>
+          <h2>O Ano Internacional dos Voluntários</h2>
+          <p>
+            A Organização das Nações Unidas declarou 2026 como o
+            <strong>Ano Internacional dos Voluntários para o Desenvolvimento Sustentável</strong>.
+            A iniciativa reconhece o papel essencial que o voluntariado exerce na construção de
+            sociedades mais justas, resilientes e solidárias.
+          </p>
+          <p>
+            Voluntariar-se é oferecer tempo, habilidades e energia em prol do próximo, sem
+            esperar nada em troca. É uma das formas mais poderosas de transformação social,
+            pois une pessoas em torno de causas comuns e cria laços que vão além das diferenças.
+          </p>
+          <p>
+            Em 2026, a Escola Paulo de Tarso entra nesse movimento global com o projeto
+            <strong>Marmita Solidária</strong> — porque acreditamos que estudantes podem
+            ser agentes de mudança real na comunidade.
+          </p>
+        </div>
+        <div class="col-cards">
+          <div class="info-card ic-orange">
+            <div class="ic-icon">🌍</div>
+            <h3>Impacto Global</h3>
+            <p>Mais de 1 bilhão de voluntários atuam no mundo, contribuindo com trilhões de horas de trabalho solidário.</p>
+          </div>
+          <div class="info-card ic-blue">
+            <div class="ic-icon">🎓</div>
+            <h3>Jovens na Liderança</h3>
+            <p>A ONU destaca que jovens são protagonistas essenciais no voluntariado e nos Objetivos de Desenvolvimento Sustentável.</p>
+          </div>
+          <div class="info-card ic-orange">
+            <div class="ic-icon">🤝</div>
+            <h3>Comunidade Forte</h3>
+            <p>Comunidades com cultura de voluntariado têm maior coesão social, menos desigualdade e mais bem-estar coletivo.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ A CAUSA ═══════════ -->
+  <section id="causa" class="section-blue">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag tag-light">A causa que escolhemos</span>
+        <h2>Insegurança Alimentar:<br>uma realidade invisível</h2>
+        <p class="section-desc">
+          Milhões de brasileiros enfrentam diariamente a incerteza de não saber se terão
+          comida na mesa. Essa realidade está mais perto do que imaginamos.
+        </p>
+      </div>
+
+      <div class="stats-grid reveal">
+        <div class="stat-card">
+          <div class="stat-num">70,3<span>mi</span></div>
+          <div class="stat-txt">brasileiros em situação de insegurança alimentar (IBGE, 2024)</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">21<span>mi</span></div>
+          <div class="stat-txt">pessoas passam fome — insegurança alimentar grave — no Brasil</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">1<span>em 3</span></div>
+          <div class="stat-txt">crianças brasileiras vive em domicílio com algum grau de insegurança alimentar</div>
+        </div>
+      </div>
+
+      <div class="causa-detail reveal">
+        <div class="causa-text">
+          <h3>Quem será ajudado?</h3>
+          <p>
+            O projeto atenderá <strong>famílias em vulnerabilidade social</strong> do entorno
+            da Escola Paulo de Tarso — em especial, famílias com crianças e idosos que
+            dependem de redes de apoio comunitário para garantir refeições regulares.
+          </p>
+          <h3>Por que essa causa é importante?</h3>
+          <p>
+            A insegurança alimentar compromete o desenvolvimento físico e cognitivo de crianças,
+            agrava doenças em idosos e mantém famílias inteiras presas em ciclos de pobreza.
+            Combatê-la é um ato de justiça social — e cada alimento doado representa dignidade
+            para quem mais precisa.
+          </p>
+          <ul class="causa-list">
+            <li>🍚 Acesso à alimentação é um direito humano fundamental</li>
+            <li>📉 A fome afeta produtividade, saúde e educação</li>
+            <li>💪 Ações locais fazem diferença real e imediata</li>
+            <li>🏫 A escola pode ser ponto de partida dessa mudança</li>
+          </ul>
+        </div>
+        <div class="causa-visual">
+          <div class="dado-destaque">
+            <div class="dado-icone">🥗</div>
+            <blockquote>
+              "Nenhuma grande mudança social acontece sem pessoas dispostas a agir
+              quando a situação ainda parece impossível."
+            </blockquote>
+            <cite>— Margaret Mead, antropóloga</cite>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="wave-bottom-blue">
+      <svg viewBox="0 0 1440 70" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M0,35 C480,70 960,0 1440,35 L1440,70 L0,70 Z" fill="#fff9f5"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ═══════════ O PROJETO ═══════════ -->
+  <section id="projeto" class="section-light">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">O Projeto</span>
+        <h2>Marmita Solidária</h2>
+        <p class="section-desc">
+          Uma ação concreta, realizada pela e para a comunidade escolar,
+          com impacto direto em famílias que precisam de apoio.
+        </p>
+      </div>
+
+      <div class="projeto-grid reveal">
+        <div class="proj-card pc-main">
+          <div class="pc-icon">🍱</div>
+          <h3>O que vai acontecer</h3>
+          <p>
+            Arrecadação de alimentos não-perecíveis e kits de higiene ao longo de
+            uma semana, seguida de um dia de organização e distribuição para famílias
+            cadastradas por assistentes sociais parceiros.
+          </p>
+        </div>
+        <div class="proj-card">
+          <div class="pc-icon">📍</div>
+          <h3>Onde</h3>
+          <p>Pátio principal e ginásio da <strong>Escola Paulo de Tarso</strong></p>
+        </div>
+        <div class="proj-card">
+          <div class="pc-icon">📅</div>
+          <h3>Quando</h3>
+          <p><strong>Sábado, 20 de junho de 2026</strong><br>das 9h às 13h</p>
+        </div>
+        <div class="proj-card">
+          <div class="pc-icon">🙋</div>
+          <h3>O que os voluntários farão</h3>
+          <ul>
+            <li>Receber e registrar doações</li>
+            <li>Organizar e embalar os kits</li>
+            <li>Preparar marmitas coletivas</li>
+            <li>Entregar às famílias beneficiadas</li>
+          </ul>
+        </div>
+        <div class="proj-card">
+          <div class="pc-icon">🎯</div>
+          <h3>Meta</h3>
+          <p>Atender <strong>100 famílias</strong> com kits de alimentos e pelo menos <strong>200 marmitas</strong> distribuídas no dia do evento.</p>
+        </div>
+        <div class="proj-card">
+          <div class="pc-icon">👥</div>
+          <h3>Público beneficiado</h3>
+          <p>Famílias em vulnerabilidade social do entorno da escola, indicadas por assistentes sociais e líderes comunitários.</p>
+        </div>
+      </div>
+
+      <div class="cronograma reveal">
+        <h3>Cronograma da ação</h3>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <strong>09 – 14 jun</strong>
+              <span>Arrecadação de alimentos nas salas de aula e portaria</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <strong>19 jun (sexta)</strong>
+              <span>Triagem e organização das doações no ginásio</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <strong>20 jun, 9h (sábado)</strong>
+              <span>Chegada dos voluntários e montagem dos postos</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <strong>20 jun, 10h–13h</strong>
+              <span>Distribuição de marmitas e kits de alimentos às famílias</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ FORMULÁRIO ═══════════ -->
+  <section id="formulario" class="section-form">
+    <div class="container">
+      <div class="form-wrap reveal">
+        <div class="form-info">
+          <span class="section-tag">Inscrição</span>
+          <h2>Faça parte da mudança</h2>
+          <p>
+            Preencha o formulário e garanta sua vaga como voluntário do
+            <strong>Marmita Solidária 2026</strong>. Juntos, faremos a diferença!
+          </p>
+          <div class="form-details">
+            <div class="fd-item">📅 <span>20 de junho de 2026</span></div>
+            <div class="fd-item">⏰ <span>Das 9h às 13h</span></div>
+            <div class="fd-item">📍 <span>Escola Paulo de Tarso</span></div>
+          </div>
+          <!-- Contador de voluntários -->
+          <div class="vol-counter">
+            <div class="vc-num" id="formCounter">0</div>
+            <div class="vc-txt">pessoas já se inscreveram</div>
+            <div class="vc-bar"><div class="vc-fill" id="vcFill"></div></div>
+            <div class="vc-meta">Meta: 50 voluntários</div>
+          </div>
+        </div>
+
+        <div class="form-box" id="formBox">
+          <!-- Mensagem de já inscrito (oculta por padrão) -->
+          <div class="already-msg" id="alreadyMsg" style="display:none;">
+            <div class="am-icon">🎉</div>
+            <h3>Você já está inscrito!</h3>
+            <p id="alreadyName">Obrigado por fazer parte do Marmita Solidária 2026!</p>
+            <p class="am-sub">Nos vemos no dia <strong>20 de junho</strong> às 9h. Fique atento ao e-mail com mais detalhes.</p>
+            <button class="btn btn-orange" id="cancelBtn">Cancelar minha inscrição</button>
+          </div>
+
+          <!-- Formulário -->
+          <form id="volunteerForm" novalidate>
+            <h3>Formulário de Inscrição</h3>
+
+            <div class="field-group">
+              <label for="nome">Nome completo *</label>
+              <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required />
+              <span class="field-err" id="err-nome"></span>
+            </div>
+
+            <div class="field-row">
+              <div class="field-group">
+                <label for="idade">Idade *</label>
+                <input type="number" id="idade" name="idade" placeholder="Ex: 16" min="10" max="99" required />
+                <span class="field-err" id="err-idade"></span>
+              </div>
+              <div class="field-group">
+                <label for="email">E-mail *</label>
+                <input type="email" id="email" name="email" placeholder="seu@email.com" required />
+                <span class="field-err" id="err-email"></span>
+              </div>
+            </div>
+
+            <div class="field-group">
+              <label for="turma">Turma / Série</label>
+              <input type="text" id="turma" name="turma" placeholder="Ex: 2º ano B / Externo à escola" />
+            </div>
+
+            <!-- Campo personalizado da causa: contribuição -->
+            <div class="field-group">
+              <label>Como você pode contribuir? * <span class="field-hint">(escolha ao menos uma)</span></label>
+              <div class="checkbox-grid">
+                <label class="check-item">
+                  <input type="checkbox" name="contribuicao" value="arrecadar" />
+                  <span>🧺 Arrecadar doações</span>
+                </label>
+                <label class="check-item">
+                  <input type="checkbox" name="contribuicao" value="preparar" />
+                  <span>👨‍🍳 Preparar marmitas</span>
+                </label>
+                <label class="check-item">
+                  <input type="checkbox" name="contribuicao" value="distribuir" />
+                  <span>🚗 Distribuir alimentos</span>
+                </label>
+                <label class="check-item">
+                  <input type="checkbox" name="contribuicao" value="organizar" />
+                  <span>📦 Organizar estoque</span>
+                </label>
+                <label class="check-item">
+                  <input type="checkbox" name="contribuicao" value="divulgar" />
+                  <span>📣 Divulgar o projeto</span>
+                </label>
+                <label class="check-item">
+                  <input type="checkbox" name="contribuicao" value="qualquer" />
+                  <span>💛 Onde precisar</span>
+                </label>
+              </div>
+              <span class="field-err" id="err-contrib"></span>
+            </div>
+
+            <div class="field-group">
+              <label for="obs">Observações ou alergias alimentares</label>
+              <textarea id="obs" name="obs" rows="3" placeholder="Alguma restrição, dúvida ou disponibilidade especial?"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-orange btn-full">
+              <span>Confirmar minha inscrição</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </button>
+          </form>
+
+          <!-- Mensagem de sucesso (oculta por padrão) -->
+          <div class="success-msg" id="successMsg" style="display:none;">
+            <div class="sm-icon">✅</div>
+            <h3>Inscrição confirmada!</h3>
+            <p id="successName">Obrigado, voluntário!</p>
+            <p>Você receberá detalhes no e-mail cadastrado. Nos vemos no dia <strong>20 de junho</strong>!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ DESENVOLVEDOR ═══════════ -->
+  <section id="desenvolvedor" class="section-dev">
+    <div class="container">
+      <div class="dev-card reveal">
+        <div class="dev-photo">
+          <!-- Foto do desenvolvedor / grupo -->
+          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-label="Foto do desenvolvedor">
+            <circle cx="100" cy="100" r="100" fill="#1e3a8a"/>
+            <circle cx="100" cy="82" r="38" fill="#FED7AA"/>
+            <path d="M30 190 Q60 145 100 140 Q140 145 170 190" fill="#F97316"/>
+            <circle cx="100" cy="78" r="28" fill="#FBBF24"/>
+            <circle cx="100" cy="70" r="30" fill="#92400e"/>
+          </svg>
+          <div class="dev-badge">👨‍💻 Desenvolvedor</div>
+        </div>
+        <div class="dev-info">
+          <span class="section-tag tag-light">Sobre o site</span>
+          <h2>André Zauli</h2>
+          <p class="dev-turma">Turma: 2º Ano B · Escola Paulo de Tarso · 2026</p>
+          <p class="dev-desc">
+            Este site foi desenvolvido como atividade prática da disciplina de
+            Desenvolvimento Web, com o objetivo de criar uma proposta real de
+            voluntariado conectada à Escola Paulo de Tarso e à comunidade local.
+            O projeto <em>Marmita Solidária</em> nasceu da vontade de transformar
+            conhecimento técnico em impacto social concreto.
+          </p>
+          <div class="dev-tech">
+            <h4>Tecnologias utilizadas</h4>
+            <div class="tech-tags">
+              <span class="tag">HTML5</span>
+              <span class="tag">CSS3</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">localStorage API</span>
+              <span class="tag">SVG</span>
+              <span class="tag">Google Fonts</span>
+            </div>
+          </div>
+          <div class="dev-ls">
+            <h4>Uso de localStorage</h4>
+            <p>
+              O site utiliza <code>localStorage</code> para salvar os dados de inscrição
+              de voluntários e manter um contador persistente de inscritos. Ao retornar
+              ao site, o usuário já inscrito vê uma mensagem personalizada de confirmação,
+              sem precisar preencher o formulário novamente.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <svg width="36" height="36" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="22" cy="22" r="21" fill="#F97316"/>
+            <path d="M22 6 L36 14 L36 30 L22 38 L8 30 L8 14 Z" fill="none" stroke="#fff" stroke-width="1.5"/>
+            <text x="22" y="26" text-anchor="middle" font-family="serif" font-weight="900" font-size="11" fill="#fff" letter-spacing="1">EPT</text>
+          </svg>
+          <div>
+            <strong>Marmita Solidária</strong>
+            <span>Escola Paulo de Tarso · 2026</span>
+          </div>
+        </div>
+        <p class="footer-slogan">
+          "Uma marmita pode mudar um dia.<br>Muitos voluntários mudam vidas."
+        </p>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Escola Paulo de Tarso · Projeto desenvolvido para fins educacionais</p>
+        <p>2026 · Ano Internacional dos Voluntários para o Desenvolvimento Sustentável</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
