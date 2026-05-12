@@ -41,18 +41,20 @@ html {
 }
 
 body {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: 'Quicksand', sans-serif;
   color: var(--gray-800);
   background: var(--warm-bg);
   line-height: 1.7;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-weight: 500;
 }
 
 h1, h2, h3, h4 {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Fredoka', sans-serif;
   line-height: 1.2;
+  font-weight: 700;
 }
 
 a { text-decoration: none; color: inherit; }
@@ -107,7 +109,7 @@ textarea, input, select { font-family: inherit; }
   display: flex;
   align-items: center;
   gap: 10px;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Fredoka', sans-serif;
   font-weight: 700;
   font-size: 0.95rem;
   color: var(--white);
@@ -312,9 +314,9 @@ textarea, input, select { font-family: inherit; }
 }
 
 .counter-num {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Fredoka', sans-serif;
   font-size: 3rem;
-  font-weight: 900;
+  font-weight: 800;
   color: var(--white);
 }
 
@@ -519,9 +521,9 @@ textarea, input, select { font-family: inherit; }
 }
 
 .stat-num {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Fredoka', sans-serif;
   font-size: 3rem;
-  font-weight: 900;
+  font-weight: 800;
   color: var(--orange-lt);
   line-height: 1;
   margin-bottom: 10px;
@@ -585,9 +587,9 @@ textarea, input, select { font-family: inherit; }
 
 blockquote {
   color: var(--white);
-  font-family: 'Playfair Display', serif;
+  font-family: 'Fredoka', sans-serif;
   font-size: 1.1rem;
-  font-style: italic;
+  font-weight: 600;
   line-height: 1.6;
   margin-bottom: 12px;
 }
@@ -781,9 +783,9 @@ cite {
 }
 
 .vc-num {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Fredoka', sans-serif;
   font-size: 3.2rem;
-  font-weight: 900;
+  font-weight: 800;
   color: var(--orange);
   line-height: 1;
 }
@@ -1090,7 +1092,7 @@ code {
 
 .footer-brand strong {
   color: var(--white);
-  font-family: 'Playfair Display', serif;
+  font-family: 'Fredoka', sans-serif;
   font-size: 1.1rem;
 }
 
@@ -1100,8 +1102,9 @@ code {
 }
 
 .footer-slogan {
-  font-family: 'Playfair Display', serif;
-  font-style: italic;
+  font-family: 'Fredoka', sans-serif;
+  font-style: normal;
+  font-weight: 600;
   color: rgba(255,255,255,0.6);
   font-size: 0.95rem;
   text-align: right;
