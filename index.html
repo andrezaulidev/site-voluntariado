@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Marmita Solidária · Escola Paulo de Tarso</title>
+  <title>Marmita Solidária · Colégio Paulo de Tarso</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700;800&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -16,12 +16,13 @@
     <div class="nav-container">
       <a href="#hero" class="nav-logo">
         <img src="fotos/logo_colegio.png" alt="Logo Colégio Paulo de Tarso" width="44" height="44">
-        <span>Escola Paulo de Tarso</span>
+        <span>Colégio Paulo de Tarso</span>
       </a>
       <ul class="nav-links" id="navLinks">
         <li><a href="#voluntariado">Voluntariado</a></li>
         <li><a href="#causa">A Causa</a></li>
         <li><a href="#projeto">O Projeto</a></li>
+        <li><a href="#mapa">Localização</a></li>
         <li><a href="#formulario">Inscreva-se</a></li>
       </ul>
       <a href="#formulario" class="nav-cta">Seja Voluntário</a>
@@ -49,7 +50,7 @@
       </h1>
       <p class="hero-sub">
         Junte-se ao projeto <strong>Marmita Solidária</strong> e ajude a combater
-        a insegurança alimentar na comunidade da Escola Paulo de Tarso.
+        a insegurança alimentar na comunidade do Colégio Paulo de Tarso.
       </p>
       <div class="hero-btns">
         <a href="#formulario" class="btn btn-white">Quero ser voluntário</a>
@@ -62,7 +63,7 @@
     </div>
 
     <!-- Ilustração SVG estilo IA -->
-    <div class="hero-art" aria-label="Ilustração gerada por IA: comunidade compartilhando refeições">
+    <div class="hero-art" aria-label="Ilustração: comunidade compartilhando refeições">
       <svg viewBox="0 0 420 400" xmlns="http://www.w3.org/2000/svg" role="img">
         <title>Comunidade solidária compartilhando alimentos</title>
         <!-- BG circle -->
@@ -105,8 +106,7 @@
         <circle cx="360" cy="80" r="4" fill="#fff" opacity="0.4"/>
         <circle cx="380" cy="150" r="2" fill="#fff" opacity="0.6"/>
         <circle cx="40" cy="180" r="3" fill="#fff" opacity="0.5"/>
-        <!-- Label -->
-        <text x="210" y="360" text-anchor="middle" font-family="sans-serif" font-size="10" fill="rgba(255,255,255,0.5)" letter-spacing="1">✦ ILUSTRAÇÃO GERADA POR IA ✦</text>
+
       </svg>
     </div>
 
@@ -136,7 +136,7 @@
             pois une pessoas em torno de causas comuns e cria laços que vão além das diferenças.
           </p>
           <p>
-            Em 2026, a Escola Paulo de Tarso entra nesse movimento global com o projeto
+            Em 2026, o Colégio Paulo de Tarso entra nesse movimento global com o projeto
             <strong>Marmita Solidária</strong> — porque acreditamos que estudantes podem
             ser agentes de mudança real na comunidade.
           </p>
@@ -181,11 +181,11 @@
         </div>
         <div class="stat-card">
           <div class="stat-num">21<span>mi</span></div>
-          <div class="stat-txt">pessoas passam fome — insegurança alimentar grave — no Brasil</div>
+          <div class="stat-txt">pessoas passam fome — insegurança alimentar grave — no Brasil <em>(IBGE, 2023)</em></div>
         </div>
         <div class="stat-card">
           <div class="stat-num">1<span>em 3</span></div>
-          <div class="stat-txt">crianças brasileiras vive em domicílio com algum grau de insegurança alimentar</div>
+          <div class="stat-txt">crianças brasileiras vive em domicílio com algum grau de insegurança alimentar <em>(IBGE/PNAD, 2023)</em></div>
         </div>
       </div>
 
@@ -194,7 +194,7 @@
           <h3>Quem será ajudado?</h3>
           <p>
             O projeto atenderá <strong>famílias em vulnerabilidade social</strong> do entorno
-            da Escola Paulo de Tarso — em especial, famílias com crianças e idosos que
+            do Colégio Paulo de Tarso — em especial, famílias com crianças e idosos que
             dependem de redes de apoio comunitário para garantir refeições regulares.
           </p>
           <h3>Por que essa causa é importante?</h3>
@@ -255,7 +255,7 @@
         <div class="proj-card">
           <div class="pc-icon">📍</div>
           <h3>Onde</h3>
-          <p>Pátio principal e ginásio da <strong>Escola Paulo de Tarso</strong></p>
+          <p>Pátio principal e ginásio do <strong>Colégio Paulo de Tarso</strong></p>
         </div>
         <div class="proj-card">
           <div class="pc-icon">📅</div>
@@ -320,6 +320,53 @@
     </div>
   </section>
 
+  <!-- ═══════════ GRÁFICO ═══════════ -->
+  <section id="grafico" class="section-light">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Dados</span>
+        <h2>Insegurança Alimentar no Brasil</h2>
+        <p class="section-desc">Visualização dos dados de insegurança alimentar por região brasileira, segundo o IBGE (2023).</p>
+      </div>
+      <div class="chart-wrap reveal">
+        <canvas id="insegChart" width="800" height="380" aria-label="Gráfico de insegurança alimentar por região"></canvas>
+        <p class="chart-fonte">Fonte: IBGE – Pesquisa de Orçamentos Familiares (POF) e PNAD Contínua 2023.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ MAPA ═══════════ -->
+  <section id="mapa" class="section-blue">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag tag-light">Onde estamos</span>
+        <h2>Colégio Paulo de Tarso</h2>
+        <p class="section-desc">Rua Mazzini, 61 — venha nos visitar e fazer parte dessa transformação!</p>
+      </div>
+      <div class="map-wrap reveal">
+        <iframe
+          title="Localização do Colégio Paulo de Tarso"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.8!2d-46.68!3d-23.56!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce574c9e68f56b%3A0x5ae9f4e7a64ed2b5!2sCol%C3%A9gio%20Paulo%20de%20Tarso!5e0!3m2!1spt-BR!2sbr!4v1234567890"
+          width="100%"
+          height="380"
+          style="border:0; border-radius:16px;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+        <div class="map-info">
+          <span>📍 Rua Mazzini, 61 — São Paulo, SP</span>
+          <a href="https://maps.google.com/?q=Colégio+Paulo+de+Tarso+Rua+Mazzini+61+São+Paulo" target="_blank" rel="noopener noreferrer" class="btn btn-outline-white btn-sm">Abrir no Google Maps</a>
+        </div>
+      </div>
+    </div>
+    <div class="wave-bottom-blue">
+      <svg viewBox="0 0 1440 70" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M0,35 C480,70 960,0 1440,35 L1440,70 L0,70 Z" fill="#fff9f5"/>
+      </svg>
+    </div>
+  </section>
+
   <!-- ═══════════ FORMULÁRIO ═══════════ -->
   <section id="formulario" class="section-form">
     <div class="container">
@@ -334,7 +381,7 @@
           <div class="form-details">
             <div class="fd-item">📅 <span>20 de junho de 2026</span></div>
             <div class="fd-item">⏰ <span>Das 9h às 13h</span></div>
-            <div class="fd-item">📍 <span>Escola Paulo de Tarso</span></div>
+            <div class="fd-item">📍 <span>Colégio Paulo de Tarso</span></div>
           </div>
           <!-- Contador de voluntários -->
           <div class="vol-counter">
@@ -445,24 +492,24 @@
     <div class="container">
       <div class="dev-card reveal">
         <div class="dev-photo">
-          <!-- Foto do desenvolvedor / grupo -->
-          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-label="Foto do desenvolvedor">
-            <circle cx="100" cy="100" r="100" fill="#1e3a8a"/>
-            <circle cx="100" cy="82" r="38" fill="#FED7AA"/>
-            <path d="M30 190 Q60 145 100 140 Q140 145 170 190" fill="#F97316"/>
-            <circle cx="100" cy="78" r="28" fill="#FBBF24"/>
-            <circle cx="100" cy="70" r="30" fill="#92400e"/>
-          </svg>
+          <!-- Avatar do desenvolvedor -->
+          <img src="fotos/andre.png" alt="Avatar do desenvolvedor André" class="dev-avatar">
           <div class="dev-badge">👨‍💻 Desenvolvedor</div>
         </div>
         <div class="dev-info">
           <span class="section-tag tag-light">Sobre o site</span>
-          <h2>André Zauli</h2>
-          <p class="dev-turma">Turma: 2º Ano B · Escola Paulo de Tarso · 2026</p>
+          <h2>André Soares Costa Zauli Santos</h2>
+          <p class="dev-turma">Turma: 2º Ano do Ensino Médio Técnico · Colégio Paulo de Tarso · 2026</p>
+          <div class="dev-links">
+            <a href="https://github.com/andrezaulidev" target="_blank" rel="noopener noreferrer" class="dev-github-link">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              github.com/andrezaulidev
+            </a>
+          </div>
           <p class="dev-desc">
             Este site foi desenvolvido como atividade prática da disciplina de
             Desenvolvimento Web, com o objetivo de criar uma proposta real de
-            voluntariado conectada à Escola Paulo de Tarso e à comunidade local.
+            voluntariado conectada à Colégio Paulo de Tarso e à comunidade local.
             O projeto <em>Marmita Solidária</em> nasceu da vontade de transformar
             conhecimento técnico em impacto social concreto.
           </p>
@@ -496,14 +543,10 @@
     <div class="container">
       <div class="footer-top">
         <div class="footer-brand">
-          <svg width="36" height="36" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="22" cy="22" r="21" fill="#F97316"/>
-            <path d="M22 6 L36 14 L36 30 L22 38 L8 30 L8 14 Z" fill="none" stroke="#fff" stroke-width="1.5"/>
-            <text x="22" y="26" text-anchor="middle" font-family="serif" font-weight="900" font-size="11" fill="#fff" letter-spacing="1">EPT</text>
-          </svg>
+          <img src="fotos/logo_colegio.png" alt="Logo Colégio Paulo de Tarso" width="36" height="36">
           <div>
             <strong>Marmita Solidária</strong>
-            <span>Escola Paulo de Tarso · 2026</span>
+            <span>Colégio Paulo de Tarso · 2026</span>
           </div>
         </div>
         <p class="footer-slogan">
@@ -511,12 +554,71 @@
         </p>
       </div>
       <div class="footer-bottom">
-        <p>© 2026 Escola Paulo de Tarso · Projeto desenvolvido para fins educacionais</p>
+        <p>© 2026 Colégio Paulo de Tarso · Projeto desenvolvido para fins educacionais</p>
         <p>2026 · Ano Internacional dos Voluntários para o Desenvolvimento Sustentável</p>
       </div>
     </div>
   </footer>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
   <script src="script.js"></script>
+  <script>
+    // Gráfico de insegurança alimentar por região (IBGE 2023)
+    const ctx = document.getElementById('insegChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Norte', 'Nordeste', 'Centro-Oeste', 'Sudeste', 'Sul'],
+        datasets: [
+          {
+            label: 'Insegurança Alimentar Leve/Moderada (%)',
+            data: [52.3, 58.1, 32.4, 26.7, 19.8],
+            backgroundColor: 'rgba(249, 115, 22, 0.75)',
+            borderColor: '#F97316',
+            borderWidth: 2,
+            borderRadius: 8,
+          },
+          {
+            label: 'Insegurança Alimentar Grave (%)',
+            data: [22.1, 28.6, 10.2, 8.4, 5.3],
+            backgroundColor: 'rgba(30, 58, 138, 0.75)',
+            borderColor: '#1e3a8a',
+            borderWidth: 2,
+            borderRadius: 8,
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            position: 'top',
+            labels: { font: { family: 'Quicksand', size: 13 }, color: '#374151', padding: 20 }
+          },
+          tooltip: {
+            callbacks: {
+              label: ctx => ` ${ctx.dataset.label}: ${ctx.parsed.y}% da população`
+            }
+          }
+        },
+        scales: {
+          x: {
+            grid: { display: false },
+            ticks: { font: { family: 'Quicksand', weight: '600' }, color: '#374151' }
+          },
+          y: {
+            beginAtZero: true,
+            max: 70,
+            ticks: {
+              font: { family: 'Quicksand' },
+              color: '#374151',
+              callback: v => v + '%'
+            },
+            grid: { color: 'rgba(0,0,0,0.06)' }
+          }
+        }
+      }
+    });
+  </script>
 </body>
 </html>

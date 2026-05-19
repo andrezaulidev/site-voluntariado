@@ -193,36 +193,13 @@ volunteerForm.addEventListener('submit', (e) => {
     return;
   }
 
-  // Enviar para Formspree
-  const formDataToSend = new FormData();
-  formDataToSend.append('nome', formData.nome);
-  formDataToSend.append('idade', formData.idade);
-  formDataToSend.append('email', formData.email);
-  formDataToSend.append('turma', formData.turma);
-  formDataToSend.append('contribuicao', formData.contribuicao.join(', '));
-  formDataToSend.append('obs', formData.obs);
+  // Salvar nova inscrição no localStorage
+  volunteers.push(formData);
+  saveVolunteers(volunteers);
 
-  fetch('https://formspree.io/f/xgodddog', {
-    method: 'POST',
-    body: formDataToSend
-  })
-  .then(response => {
-    if (response.ok) {
-      // Salvar nova inscrição no localStorage
-      volunteers.push(formData);
-      saveVolunteers(volunteers);
-
-      // Mostrar sucesso
-      showSuccess(formData.nome);
-      updateCounters();
-    } else {
-      alert('Erro ao enviar formulário. Tente novamente.');
-    }
-  })
-  .catch(error => {
-    console.error('Erro:', error);
-    alert('Erro de conexão. Tente novamente.');
-  });
+  // Mostrar sucesso e atualizar contadores
+  showSuccess(formData.nome);
+  updateCounters();
 });
 
 /* ════════════════════════════════════════
