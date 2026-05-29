@@ -1,10 +1,11 @@
-/* ═══════════════════════════════════════════════════════
+/* ─────────────────────────────────────────────────────────
    MARMITA SOLIDÁRIA · script.js
-   Funcionalidades: Menu responsivo, Formulário, localStorage, Animações
-═══════════════════════════════════════════════════════ */
+   Funcionalidades: Menu responsivo, Formulário, localStorage, Animações, Dark Mode
+───────────────────────────────────────────────────────── */
 
 /* ── Constantes e seletores ── */
 const STORAGE_KEY = 'marmita-voluntarios';
+const THEME_KEY = 'marmita-theme';
 const MAX_VOLUNTEERS = 50;
 
 // Elementos da navbar
@@ -12,6 +13,9 @@ const navbar = document.getElementById('navbar');
 const navToggle = document.getElementById('navToggle');
 const navLinks = document.getElementById('navLinks');
 const navLinksArray = navLinks.querySelectorAll('a');
+const themeToggle = document.getElementById('themeToggle');
+const themeIcon = document.getElementById('themeIcon');
+const html = document.documentElement;
 
 // Elementos do formulário
 const volunteerForm = document.getElementById('volunteerForm');
@@ -24,6 +28,50 @@ const cancelBtn = document.getElementById('cancelBtn');
 const heroCounter = document.getElementById('heroCounter');
 const formCounter = document.getElementById('formCounter');
 const vcFill = document.getElementById('vcFill');
+
+/* ════════════════════════════════════════
+   0. DARK MODE · Inicializar e Alternar
+════════════════════════════════════════ */
+
+// Inicializar tema ao carregar página
+function initTheme() {
+  const savedTheme = localStorage.getItem(THEME_KEY);
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const isDark = savedTheme ? savedTheme === 'dark' : prefersDark;
+  
+  if (isDark) {
+    html.setAttribute('data-theme', 'dark');
+    themeIcon.textContent = '☀️';
+    themeToggle.title = 'Modo claro';
+  } else {
+    html.removeAttribute('data-theme');
+    themeIcon.textContent = '🌙';
+    themeToggle.title = 'Modo escuro';
+  }
+}
+
+// Toggle tema
+function toggleTheme() {
+  const isDark = html.getAttribute('data-theme') === 'dark';
+  
+  if (isDark) {
+    html.removeAttribute('data-theme');
+    localStorage.setItem(THEME_KEY, 'light');
+    themeIcon.textContent = '🌙';
+    themeToggle.title = 'Modo escuro';
+  } else {
+    html.setAttribute('data-theme', 'dark');
+    localStorage.setItem(THEME_KEY, 'dark');
+    themeIcon.textContent = '☀️';
+    themeToggle.title = 'Modo claro';
+  }
+}
+
+// Event listener para botão de tema
+themeToggle.addEventListener('click', toggleTheme);
+
+// Inicializar tema
+initTheme();
 
 /* ════════════════════════════════════════
    1. NAVBAR · ScrollEffect + MenuToggle

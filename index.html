@@ -26,6 +26,9 @@
         <li><a href="#formulario">Inscreva-se</a></li>
       </ul>
       <a href="#formulario" class="nav-cta">Seja Voluntário</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Alternar modo escuro/claro" title="Modo escuro">
+        <span id="themeIcon">🌙</span>
+      </button>
       <button class="nav-toggle" id="navToggle" aria-label="Abrir menu">
         <span></span><span></span><span></span>
       </button>
@@ -487,6 +490,64 @@
     </div>
   </section>
 
+  <!-- ═══════════ REFERÊNCIAS E INSPIRAÇÕES ═══════════ -->
+  <section id="referencias" class="section-light">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Inspiração</span>
+        <h2>Organizações que Lutam Contra a Fome</h2>
+        <p class="section-desc">
+          Nosso projeto é inspirado no trabalho de organizações globais e nacionais
+          dedicadas ao combate à insegurança alimentar e ao desenvolvimento sustentável.
+        </p>
+      </div>
+
+      <div class="orgs-grid reveal">
+        <div class="org-card">
+          <div class="org-icon">🌍</div>
+          <h3>Action Against Hunger / Ação Contra a Fome</h3>
+          <p>Organização internacional que trabalha em mais de 45 países combatendo fome e desnutrição através de programas de segurança alimentar.</p>
+          <a href="https://www.actionagainsthunger.org" target="_blank" rel="noopener noreferrer" class="org-link">Conheça →</a>
+        </div>
+
+        <div class="org-card">
+          <div class="org-icon">🌾</div>
+          <h3>Programa Mundial de Alimentos (WFP)</h3>
+          <p>Agência da ONU que fornece assistência alimentar de emergência e trabalha para eliminar a fome e a pobreza globalmente.</p>
+          <a href="https://www.wfp.org" target="_blank" rel="noopener noreferrer" class="org-link">Conheça →</a>
+        </div>
+
+        <div class="org-card">
+          <div class="org-icon">🤝</div>
+          <h3>Banco de Alimentos Brasil</h3>
+          <p>Rede de organizações que coleta alimentos doados por empresas e distribui para pessoas em situação de insegurança alimentar.</p>
+          <a href="https://www.bancodealimentos.org.br" target="_blank" rel="noopener noreferrer" class="org-link">Conheça →</a>
+        </div>
+
+        <div class="org-card">
+          <div class="org-icon">💚</div>
+          <h3>Instituto Ethos</h3>
+          <p>Organização que promove responsabilidade social e desenvolvimento sustentável em empresas e comunidades brasileiras.</p>
+          <a href="https://www.ethos.org.br" target="_blank" rel="noopener noreferrer" class="org-link">Conheça →</a>
+        </div>
+
+        <div class="org-card">
+          <div class="org-icon">🍽️</div>
+          <h3>Cáritas Brasileira</h3>
+          <p>Entidade eclesial que atua na promoção da justiça social, incluindo programas de segurança alimentar e inclusão social.</p>
+          <a href="https://www.caritas.org.br" target="_blank" rel="noopener noreferrer" class="org-link">Conheça →</a>
+        </div>
+
+        <div class="org-card">
+          <div class="org-icon">🎯</div>
+          <h3>ODS 2 - ONU</h3>
+          <p>Objetivo de Desenvolvimento Sustentável da ONU focado em acabar com a fome, alcançar segurança alimentar e melhorar a nutrição.</p>
+          <a href="https://odsbrasil.gov.br" target="_blank" rel="noopener noreferrer" class="org-link">Conheça →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ═══════════ DESENVOLVEDOR ═══════════ -->
   <section id="desenvolvedor" class="section-dev">
     <div class="container">
@@ -509,9 +570,12 @@
           <p class="dev-desc">
             Este site foi desenvolvido como atividade prática da disciplina de
             Desenvolvimento Web, com o objetivo de criar uma proposta real de
-            voluntariado conectada à Colégio Paulo de Tarso e à comunidade local.
-            O projeto <em>Marmita Solidária</em> nasceu da vontade de transformar
-            conhecimento técnico em impacto social concreto.
+            voluntariado conectada ao Colégio Paulo de Tarso e à comunidade local,
+            alinhado com o <em>Ano Internacional dos Voluntários (2026)</em>. O projeto
+            <em>Marmita Solidária</em> nasceu da vontade de transformar conhecimento técnico
+            em impacto social concreto, inspirado nas ações de organizações como Action Against
+            Hunger, WFP, Banco de Alimentos Brasil e outras entidades dedicadas ao combate
+            à insegurança alimentar.
           </p>
           <div class="dev-tech">
             <h4>Tecnologias utilizadas</h4>
@@ -564,61 +628,70 @@
   <script src="script.js"></script>
   <script>
     // Gráfico de insegurança alimentar por região (IBGE 2023)
-    const ctx = document.getElementById('insegChart').getContext('2d');
-    new Chart(ctx, {
-      type: 'bar',
-      data: {
-        labels: ['Norte', 'Nordeste', 'Centro-Oeste', 'Sudeste', 'Sul'],
-        datasets: [
-          {
-            label: 'Insegurança Alimentar Leve/Moderada (%)',
-            data: [52.3, 58.1, 32.4, 26.7, 19.8],
-            backgroundColor: 'rgba(249, 115, 22, 0.75)',
-            borderColor: '#F97316',
-            borderWidth: 2,
-            borderRadius: 8,
+    function renderChart() {
+      const ctx = document.getElementById('insegChart').getContext('2d');
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      const textColor = isDark ? '#cbd5e1' : '#374151';
+      const gridColor = isDark ? 'rgba(100,116,139,0.1)' : 'rgba(0,0,0,0.06)';
+      
+      new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['Norte', 'Nordeste', 'Centro-Oeste', 'Sudeste', 'Sul'],
+          datasets: [
+            {
+              label: 'Insegurança Alimentar Leve/Moderada (%)',
+              data: [52.3, 58.1, 32.4, 26.7, 19.8],
+              backgroundColor: 'rgba(16, 185, 129, 0.75)',
+              borderColor: '#10b981',
+              borderWidth: 2,
+              borderRadius: 8,
+            },
+            {
+              label: 'Insegurança Alimentar Grave (%)',
+              data: [22.1, 28.6, 10.2, 8.4, 5.3],
+              backgroundColor: 'rgba(15, 118, 110, 0.75)',
+              borderColor: '#0f766e',
+              borderWidth: 2,
+              borderRadius: 8,
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'top',
+              labels: { font: { family: 'Quicksand', size: 13 }, color: textColor, padding: 20 }
+            },
+            tooltip: {
+              callbacks: {
+                label: ctx => ` ${ctx.dataset.label}: ${ctx.parsed.y}% da população`
+              }
+            }
           },
-          {
-            label: 'Insegurança Alimentar Grave (%)',
-            data: [22.1, 28.6, 10.2, 8.4, 5.3],
-            backgroundColor: 'rgba(30, 58, 138, 0.75)',
-            borderColor: '#1e3a8a',
-            borderWidth: 2,
-            borderRadius: 8,
-          }
-        ]
-      },
-      options: {
-        responsive: true,
-        plugins: {
-          legend: {
-            position: 'top',
-            labels: { font: { family: 'Quicksand', size: 13 }, color: '#374151', padding: 20 }
-          },
-          tooltip: {
-            callbacks: {
-              label: ctx => ` ${ctx.dataset.label}: ${ctx.parsed.y}% da população`
+          scales: {
+            x: {
+              grid: { display: false },
+              ticks: { font: { family: 'Quicksand', weight: '600' }, color: textColor }
+            },
+            y: {
+              beginAtZero: true,
+              max: 70,
+              ticks: {
+                font: { family: 'Quicksand' },
+                color: textColor,
+                callback: v => v + '%'
+              },
+              grid: { color: gridColor }
             }
           }
-        },
-        scales: {
-          x: {
-            grid: { display: false },
-            ticks: { font: { family: 'Quicksand', weight: '600' }, color: '#374151' }
-          },
-          y: {
-            beginAtZero: true,
-            max: 70,
-            ticks: {
-              font: { family: 'Quicksand' },
-              color: '#374151',
-              callback: v => v + '%'
-            },
-            grid: { color: 'rgba(0,0,0,0.06)' }
-          }
         }
-      }
-    });
+      });
+    }
+    
+    // Renderizar gráfico quando o DOM estiver pronto
+    document.addEventListener('DOMContentLoaded', renderChart);
   </script>
 </body>
 </html>
